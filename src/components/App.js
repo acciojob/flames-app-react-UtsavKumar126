@@ -31,18 +31,18 @@ const App=()=>{
     return(
         <div id="main">
            {/* Do not remove the main div */}
-           <input id="input1" 
+           <input id="input1" name="name1"
            onChange={(e)=>setName1(e.target.value)} 
-           value={name1}
+           value={name1} data-testid="input1"
            placeholder="Enter first name"/>
-           <input id="input2"
+           <input id="input2" data-testid="input2" name="name2"
            onChange={(e)=>setName2(e.target.value)} 
            value={name2}
            placeholder="Enter second name"/>
-           <button id="calculate_relationship" onClick={calculateStatus}>Calculate Relationship Future</button>
-           <button id="clear" onClick={changeValue}>Clear</button>
+           <button id="calculate_relationship" onClick={calculateStatus} data-testid="calculate_relationship">Calculate Relationship Future</button>
+           <button id="clear" onClick={changeValue} data-testid="clear">Clear</button>
            {
-            relation!=""?<h3>{relation}</h3>:""
+            relation!=""?<h3 testid="answer">{relation}</h3>:""
            }
         </div>
     )
