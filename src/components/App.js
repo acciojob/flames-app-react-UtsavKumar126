@@ -42,7 +42,7 @@ const App=()=>{
            <button id="calculate_relationship" onClick={calculateStatus} data-testid="calculate_relationship">Calculate Relationship Future</button>
            <button id="clear" onClick={changeValue} data-testid="clear">Clear</button>
            {
-            relation!=""?<h3 testid="answer">{relation}</h3>:""
+            relation!=""?<h3 data-testid="answer">{relation}</h3>:""
            }
         </div>
     )
